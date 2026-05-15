@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services &amp; Pricing | Royal LawnCare</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0&display=swap" rel="stylesheet" />
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "secondary-container": "#9cb4fe","primary-container": "#4b0082","on-secondary": "#ffffff",
+        "on-secondary-fixed-variant": "#2a4386","on-primary-container": "#ba7ef4","primary-fixed-dim": "#ddb7ff",
+        "background": "#f8f9fa","surface-bright": "#f8f9fa","on-secondary-fixed": "#00174a",
+        "surface-tint": "#7b41b3","secondary-fixed-dim": "#b3c5ff","on-primary-fixed": "#2c0050",
+        "outline-variant": "#cec3d3","surface-container-highest": "#e1e3e4","outline": "#7d7483",
+        "on-error-container": "#93000a","error": "#ba1a1a","on-surface-variant": "#4c4451",
+        "tertiary-fixed": "#9af6b8","inverse-on-surface": "#f0f1f2","tertiary-container": "#003a1e",
+        "secondary-fixed": "#dbe1ff","on-tertiary": "#ffffff","surface-container-low": "#f3f4f5",
+        "inverse-primary": "#ddb7ff","on-secondary-container": "#2a4486","surface-dim": "#d9dadb",
+        "surface-variant": "#e1e3e4","secondary": "#435b9f","primary": "#2e0052",
+        "on-tertiary-fixed-variant": "#00522d","on-surface": "#191c1d","primary-fixed": "#f0dbff",
+        "surface-container-lowest": "#ffffff","on-primary-fixed-variant": "#622599","on-primary": "#ffffff",
+        "surface-container-high": "#e7e8e9","on-tertiary-container": "#50ab74","tertiary-fixed-dim": "#7ed99e",
+        "inverse-surface": "#2e3132","on-error": "#ffffff","surface": "#f8f9fa",
+        "surface-container": "#edeeef","on-background": "#191c1d","tertiary": "#00220f",
+        "error-container": "#ffdad6","on-tertiary-fixed": "#00210f"
+      },
+      fontFamily: { "serif": ["Libre Caslon Text","serif"], "sans": ["Hanken Grotesk","sans-serif"] }
+    }
+  }
+}
+</script>
+<style>
+body { min-height: 100dvh; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+.icon-fill { font-variation-settings: 'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; }
+</style>
+</head>
+<body class="bg-background text-on-surface font-sans antialiased">
+
+<!-- TopAppBar -->
+<header class="bg-surface/95 backdrop-blur-md sticky top-0 w-full z-50 border-b border-primary/10 shadow-[0_10px_30px_rgba(0,35,102,0.08)] flex justify-between items-center px-5 md:px-20 h-16">
+  <div class="flex items-center gap-4">
+    <button id="menuBtn" class="md:hidden text-primary hover:opacity-80 active:scale-95"><span class="material-symbols-outlined">menu</span></button>
+    <a href="index.html" class="font-serif font-bold text-[28px] text-primary tracking-tight">Royal LawnCare</a>
+  </div>
+  <nav class="hidden md:flex items-center gap-8">
+    <a href="index.html" class="font-sans font-bold text-[14px] tracking-[0.05em] uppercase text-on-surface-variant hover:text-primary transition-colors">Home</a>
+    <a href="services.html" class="font-sans font-bold text-[14px] tracking-[0.05em] uppercase text-primary border-b-2 border-primary">Services &amp; Pricing</a>
+    <a href="estimate.html" class="font-sans font-bold text-[14px] tracking-[0.05em] uppercase text-on-surface-variant hover:text-primary transition-colors">Pricing Calculator</a>
+    <a href="about.html" class="font-sans font-bold text-[14px] tracking-[0.05em] uppercase text-on-surface-variant hover:text-primary transition-colors">About Us</a>
+    <a href="corporate.html" class="font-sans font-bold text-[14px] tracking-[0.05em] uppercase text-on-surface-variant hover:text-primary transition-colors">Corporate</a>
+    <a href="contact.html" class="font-sans font-bold text-[14px] tracking-[0.05em] uppercase text-on-surface-variant hover:text-primary transition-colors">Contact</a>
+  </nav>
+  <a href="estimate.html" class="hidden md:inline-flex bg-primary-container text-on-primary font-bold px-8 py-3 rounded-full shadow-lg hover:opacity-90 active:scale-95 transition-all duration-200 text-sm">Get Free Estimate</a>
+</header>
+
+<!-- Mobile Drawer -->
+<aside id="mobileDrawer" class="fixed inset-0 z-40 hidden">
+  <div id="drawerOverlay" class="absolute inset-0 bg-black/50"></div>
+  <div class="absolute top-0 left-0 h-full w-4/5 bg-surface shadow-2xl flex flex-col py-6">
+    <div class="px-6 pb-6 border-b border-primary/5"><h2 class="font-serif text-[28px] font-bold text-primary">Royal Menu</h2></div>
+    <nav class="flex flex-col gap-2 px-4 mt-4">
+      <a href="index.html" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-full font-sans text-[18px]"><span class="material-symbols-outlined">home</span> Home</a>
+      <a href="services.html" class="flex items-center gap-4 bg-primary-container text-on-primary rounded-full px-4 py-3 font-sans text-[18px]"><span class="material-symbols-outlined icon-fill">payments</span> Services &amp; Pricing</a>
+      <a href="estimate.html" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-full font-sans text-[18px]"><span class="material-symbols-outlined">calculator</span> Pricing Calculator</a>
+      <a href="about.html" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-full font-sans text-[18px]"><span class="material-symbols-outlined">group</span> About Us</a>
+      <a href="corporate.html" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-full font-sans text-[18px]"><span class="material-symbols-outlined">business</span> Corporate Quotes</a>
+      <a href="contact.html" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-full font-sans text-[18px]"><span class="material-symbols-outlined">call</span> Contact Us</a>
+      <a href="careers.html" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-full font-sans text-[18px]"><span class="material-symbols-outlined">work</span> Careers</a>
+      <a href="privacy.html" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-full font-sans text-[18px]"><span class="material-symbols-outlined">shield</span> Privacy Policy</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- Main Content -->
+<div class="max-w-7xl mx-auto px-5 md:px-20 py-12 md:py-20 flex flex-col gap-16">
+  <!-- Hero -->
+  <section class="text-center md:text-left max-w-3xl">
+    <h1 class="font-serif font-bold text-[28px] md:text-[48px] text-primary mb-6">Premium Lawn Care Pricing</h1>
+    <p class="font-sans text-[18px] leading-relaxed text-on-surface-variant">Transparent, high-quality service tiers designed for every estate. From routine maintenance to comprehensive landscape stewardship.</p>
+  </section>
+
+  <!-- Mowing Tiers -->
+  <section>
+    <div class="flex items-center gap-4 border-b-2 border-primary/10 pb-4 mb-8">
+      <span class="material-symbols-outlined text-secondary icon-fill">grass</span>
+      <h2 class="font-serif text-[28px] font-bold text-primary">Mowing Services <span class="font-sans text-base font-normal text-on-surface-variant">(Per Visit)</span></h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-surface-container-lowest rounded-xl p-6 border border-primary/10 shadow-lg flex flex-col">
+        <div class="mb-4"><h3 class="font-bold text-[18px] text-secondary">Compact Lots</h3><p class="font-sans text-xs uppercase tracking-wider text-on-surface-variant">&lt; 5,000 sq ft</p></div>
+        <div class="flex-grow flex flex-col justify-center my-6">
+          <div class="flex justify-between items-end border-b border-surface-variant pb-2 mb-2"><span class="text-[16px] text-on-surface-variant">Low</span><span class="font-bold text-[20px] text-primary">$35</span></div>
+          <div class="flex justify-between items-end border-b border-surface-variant pb-2 mb-2"><span class="text-[16px] text-on-surface-variant font-bold">Typical</span><span class="font-bold text-[20px] text-primary">$45</span></div>
+          <div class="flex justify-between items-end"><span class="text-[16px] text-on-surface-variant">High</span><span class="font-bold text-[20px] text-primary">$55</span></div>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest rounded-xl p-6 border border-primary/10 shadow-lg flex flex-col relative overflow-hidden border-t-4 border-t-secondary">
+        <div class="mb-4"><h3 class="font-bold text-[18px] text-secondary">Standard Lots</h3><p class="font-sans text-xs uppercase tracking-wider text-on-surface-variant">5,000 - 10,000 sq ft</p></div>
+        <div class="flex-grow flex flex-col justify-center my-6">
+          <div class="flex justify-between items-end border-b border-surface-variant pb-2 mb-2"><span class="text-[16px] text-on-surface-variant">Low</span><span class="font-bold text-[20px] text-primary">$45</span></div>
+          <div class="flex justify-between items-end border-b border-surface-variant pb-2 mb-2"><span class="text-[16px] text-on-surface-variant font-bold">Typical</span><span class="font-bold text-[20px] text-primary">$60</span></div>
+          <div class="flex justify-between items-end"><span class="text-[16px] text-on-surface-variant">High</span><span class="font-bold text-[20px] text-primary">$75</span></div>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest rounded-xl p-6 border border-primary/10 shadow-lg flex flex-col">
+        <div class="mb-4"><h3 class="font-bold text-[18px] text-secondary">Large Lots</h3><p class="font-sans text-xs uppercase tracking-wider text-on-surface-variant">10,000 - 20,000 sq ft</p></div>
+        <div class="flex-grow flex flex-col justify-center my-6">
+          <div class="flex justify-between items-end border-b border-surface-variant pb-2 mb-2"><span class="text-[16px] text-on-surface-variant">Low</span><span class="font-bold text-[20px] text-primary">$60</span></div>
+          <div class="flex justify-between items-end border-b border-surface-variant pb-2 mb-2"><span class="text-[16px] text-on-surface-variant font-bold">Typical</span><span class="font-bold text-[20px] text-primary">$80</span></div>
+          <div class="flex justify-between items-end"><span class="text-[16px] text-on-surface-variant">High</span><span class="font-bold text-[20px] text-primary">$100</span></div>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest rounded-xl p-6 border border-primary/10 shadow-lg flex flex-col">
+        <div class="mb-4"><h3 class="font-bold text-[18px] text-secondary">Estate Lots</h3><p class="font-sans text-xs uppercase tracking-wider text-on-surface-variant">1+ Acre</p></div>
+        <div class="flex-grow flex flex-col justify-center my-6">
+          <div class="flex justify-between items-end border-b border-surface-variant pb-2 mb-2"><span class="text-[16px] text-on-surface-variant">Low</span><span class="font-bold text-[20px] text-primary">$100</span></div>
+          <div class="flex justify-between items-end border-b border-surface-variant pb-2 mb-2"><span class="text-[16px] text-on-surface-variant font-bold">Typical</span><span class="font-bold text-[20px] text-primary">$150</span></div>
+          <div class="flex justify-between items-end"><span class="text-[16px] text-on-surface-variant">High</span><span class="font-bold text-[20px] text-primary">$200+</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Base Rates + Subscriptions -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div class="bg-surface-container-low rounded-xl p-8 border border-primary/5">
+      <div class="flex items-center gap-4 mb-6"><span class="material-symbols-outlined text-secondary icon-fill">sell</span><h2 class="font-serif text-[24px] font-bold text-primary">Base Rates</h2></div>
+      <div class="flex flex-col gap-4">
+        <div class="flex justify-between items-center bg-surface-container-lowest p-4 rounded-xl border border-surface-variant/50"><span class="text-[18px] text-on-surface-variant">Per Quarter Acre</span><span class="font-serif text-[24px] font-bold text-primary">$27</span></div>
+        <div class="flex justify-between items-center bg-surface-container-lowest p-4 rounded-xl border border-surface-variant/50"><span class="text-[18px] text-on-surface-variant">Hourly Rate</span><span class="font-serif text-[24px] font-bold text-primary">$31<span class="text-sm text-on-surface-variant font-sans ml-1">+</span></span></div>
+      </div>
+    </div>
+    <div class="bg-secondary-fixed-dim/20 rounded-xl p-8 border border-primary/10">
+      <div class="flex items-center gap-4 mb-6"><span class="material-symbols-outlined text-primary-container icon-fill">calendar_month</span><h2 class="font-serif text-[24px] font-bold text-primary">Subscription Plans</h2></div>
+      <p class="text-[16px] text-on-surface-variant mb-4">Average costs for ongoing stewardship.</p>
+      <div class="flex flex-col gap-3">
+        <div class="flex justify-between items-center bg-surface-container-lowest p-4 rounded-xl"><div class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-secondary"></div><span class="font-bold text-sm">Weekly</span></div><span class="font-bold text-[22px] text-primary">$48 <span class="text-xs text-on-surface-variant font-normal">/avg</span></span></div>
+        <div class="flex justify-between items-center bg-surface-container-lowest p-4 rounded-xl"><div class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-secondary"></div><span class="font-bold text-sm">Bi-weekly</span></div><span class="font-bold text-[22px] text-primary">$51 <span class="text-xs text-on-surface-variant font-normal">/avg</span></span></div>
+        <div class="flex justify-between items-center bg-surface-container-lowest p-4 rounded-xl"><div class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-secondary"></div><span class="font-bold text-sm">Monthly</span></div><span class="font-bold text-[22px] text-primary">$53 <span class="text-xs text-on-surface-variant font-normal">/avg</span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add-Ons -->
+  <section>
+    <div class="flex items-center gap-4 border-b-2 border-primary/10 pb-4 mb-8">
+      <span class="material-symbols-outlined text-secondary icon-fill">add_circle</span>
+      <h2 class="font-serif text-[24px] font-bold text-primary">Enhancements &amp; Add-Ons</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div class="bg-surface-container-lowest border border-primary/10 rounded-xl p-4 flex flex-col items-center text-center gap-3 hover:bg-secondary-fixed/30 transition-colors cursor-pointer group"><span class="material-symbols-outlined text-tertiary-container text-4xl group-hover:scale-110 transition-transform">content_cut</span><span class="font-bold text-sm">Weed Whipping</span></div>
+      <div class="bg-surface-container-lowest border border-primary/10 rounded-xl p-4 flex flex-col items-center text-center gap-3 hover:bg-secondary-fixed/30 transition-colors cursor-pointer group"><span class="material-symbols-outlined text-tertiary-container text-4xl group-hover:scale-110 transition-transform">border_style</span><span class="font-bold text-sm">Edging</span></div>
+      <div class="bg-surface-container-lowest border border-primary/10 rounded-xl p-4 flex flex-col items-center text-center gap-3 hover:bg-secondary-fixed/30 transition-colors cursor-pointer group"><span class="material-symbols-outlined text-tertiary-container text-4xl group-hover:scale-110 transition-transform">mop</span><span class="font-bold text-sm">Cleanup</span></div>
+      <div class="bg-surface-container-lowest border border-primary/10 rounded-xl p-4 flex flex-col items-center text-center gap-3 hover:bg-secondary-fixed/30 transition-colors cursor-pointer group"><span class="material-symbols-outlined text-tertiary-container text-4xl group-hover:scale-110 transition-transform">nutrition</span><span class="font-bold text-sm">Fertilization</span></div>
+      <div class="bg-surface-container-lowest border border-primary/10 rounded-xl p-4 flex flex-col items-center text-center gap-3 hover:bg-secondary-fixed/30 transition-colors cursor-pointer group"><span class="material-symbols-outlined text-tertiary-container text-4xl group-hover:scale-110 transition-transform">pest_control</span><span class="font-bold text-sm">Weed Control</span></div>
+      <div class="bg-surface-container-lowest border border-primary/10 rounded-xl p-4 flex flex-col items-center text-center gap-3 hover:bg-secondary-fixed/30 transition-colors cursor-pointer group"><span class="material-symbols-outlined text-tertiary-container text-4xl group-hover:scale-110 transition-transform">eco</span><span class="font-bold text-sm">Seasonal Cleanup</span></div>
+    </div>
+  </section>
+
+  <!-- Payment Policy -->
+  <section class="bg-surface-container-low rounded-xl p-8 border border-primary/5">
+    <div class="flex items-center gap-4 border-b-2 border-primary/10 pb-4 mb-8">
+      <span class="material-symbols-outlined text-secondary icon-fill">payments</span>
+      <h2 class="font-serif text-[24px] font-bold text-primary">Payment Policy</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div><h3 class="font-bold text-[18px] text-secondary flex items-center gap-2 mb-4"><span class="material-symbols-outlined text-sm">home</span> Neighborhood Clients</h3><ul class="flex flex-col gap-3"><li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm icon-fill">check_circle</span><span class="text-[16px] text-on-surface-variant">Payment is required on arrival before work begins.</span></li><li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm icon-fill">check_circle</span><span class="text-[16px] text-on-surface-variant">All payments are non-refundable.</span></li><li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm icon-fill">check_circle</span><span class="text-[16px] text-on-surface-variant">Acceptable forms: Cash, CashApp, Venmo. <span class="italic text-xs block mt-1 text-error font-medium">(Note: Checks are not accepted for suburban residential services)</span></span></li></ul></div>
+      <div><h3 class="font-bold text-[18px] text-secondary flex items-center gap-2 mb-4"><span class="material-symbols-outlined text-sm">business</span> Professional &amp; Corporate Clients</h3><ul class="flex flex-col gap-3"><li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm icon-fill">check_circle</span><span class="text-[16px] text-on-surface-variant">Acceptable forms: Cash, Check, CashApp, Venmo.</span></li></ul></div>
+    </div>
+  </section>
+</div>
+
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t border-primary/10 py-12 px-5 md:px-20 text-center">
+  <div class="max-w-7xl mx-auto flex flex-col items-center gap-6">
+    <a href="index.html" class="font-serif font-bold text-[28px] text-primary">Royal LawnCare</a>
+    <nav class="flex flex-wrap justify-center gap-6">
+      <a href="index.html" class="font-sans text-[16px] text-on-surface-variant hover:text-primary transition-colors">Home</a>
+      <a href="services.html" class="font-sans text-[16px] text-on-surface-variant hover:text-primary transition-colors">Services</a>
+      <a href="estimate.html" class="font-sans text-[16px] text-on-surface-variant hover:text-primary transition-colors">Pricing</a>
+      <a href="about.html" class="font-sans text-[16px] text-on-surface-variant hover:text-primary transition-colors">About</a>
+      <a href="corporate.html" class="font-sans text-[16px] text-on-surface-variant hover:text-primary transition-colors">Corporate</a>
+      <a href="contact.html" class="font-sans text-[16px] text-on-surface-variant hover:text-primary transition-colors">Contact</a>
+      <a href="careers.html" class="font-sans text-[16px] text-on-surface-variant hover:text-primary transition-colors">Careers</a>
+      <a href="privacy.html" class="font-sans text-[16px] text-on-surface-variant hover:text-primary transition-colors">Privacy</a>
+    </nav>
+    <p class="font-sans text-[16px] text-on-surface-variant opacity-70">&copy; 2024 Royal LawnCare. Family Owned &amp; Operated.</p>
+  </div>
+</footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const drawer = document.getElementById("mobileDrawer");
+const overlay = document.getElementById("drawerOverlay");
+function openDrawer() { drawer.classList.remove("hidden"); document.body.style.overflow = "hidden"; }
+function closeDrawer() { drawer.classList.add("hidden"); document.body.style.overflow = ""; }
+menuBtn?.addEventListener("click", openDrawer);
+overlay?.addEventListener("click", closeDrawer);
+drawer?.querySelectorAll("a").forEach(a => a.addEventListener("click", closeDrawer));
+</script>
+</body>
+</html>

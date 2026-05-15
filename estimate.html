@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Get Your Estimate | Royal LawnCare</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0&display=swap" rel="stylesheet" />
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "secondary-container": "#9cb4fe","primary-container": "#4b0082","on-secondary": "#ffffff",
+        "on-secondary-fixed-variant": "#2a4386","on-primary-container": "#ba7ef4","primary-fixed-dim": "#ddb7ff",
+        "background": "#f8f9fa","surface-bright": "#f8f9fa","on-secondary-fixed": "#00174a",
+        "surface-tint": "#7b41b3","secondary-fixed-dim": "#b3c5ff","on-primary-fixed": "#2c0050",
+        "outline-variant": "#cec3d3","surface-container-highest": "#e1e3e4","outline": "#7d7483",
+        "on-error-container": "#93000a","error": "#ba1a1a","on-surface-variant": "#4c4451",
+        "tertiary-fixed": "#9af6b8","inverse-on-surface": "#f0f1f2","tertiary-container": "#003a1e",
+        "secondary-fixed": "#dbe1ff","on-tertiary": "#ffffff","surface-container-low": "#f3f4f5",
+        "inverse-primary": "#ddb7ff","on-secondary-container": "#2a4486","surface-dim": "#d9dadb",
+        "surface-variant": "#e1e3e4","secondary": "#435b9f","primary": "#2e0052",
+        "on-tertiary-fixed-variant": "#00522d","on-surface": "#191c1d","primary-fixed": "#f0dbff",
+        "surface-container-lowest": "#ffffff","on-primary-fixed-variant": "#622599","on-primary": "#ffffff",
+        "surface-container-high": "#e7e8e9","on-tertiary-container": "#50ab74","tertiary-fixed-dim": "#7ed99e",
+        "inverse-surface": "#2e3132","on-error": "#ffffff","surface": "#f8f9fa",
+        "surface-container": "#edeeef","on-background": "#191c1d","tertiary": "#00220f",
+        "error-container": "#ffdad6","on-tertiary-fixed": "#00210f"
+      },
+      fontFamily: { "serif": ["Libre Caslon Text","serif"], "sans": ["Hanken Grotesk","sans-serif"] }
+    }
+  }
+}
+</script>
+<style>
+body { min-height: 100dvh; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+.icon-fill { font-variation-settings: 'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; }
+</style>
+</head>
+<body class="bg-background text-on-surface font-sans antialiased">
+
+<header class="bg-surface/95 backdrop-blur-md sticky top-0 w-full z-50 border-b border-primary/10 shadow-[0_10px_30px_rgba(0,35,102,0.08)] flex justify-between items-center px-5 md:px-20 h-16">
+  <div class="flex items-center gap-4">
+    <button id="menuBtn" class="md:hidden text-primary hover:opacity-80 active:scale-95"><span class="material-symbols-outlined">menu</span></button>
+    <a href="index.html" class="font-serif font-bold text-[28px] text-primary tracking-tight">Royal LawnCare</a>
+  </div>
+  <nav class="hidden md:flex items-center gap-8">
+    <a href="index.html" class="font-sans font-bold text-[14px] tracking-[0.05em] uppercase text-on-surface-variant hover:text-primary transition-colors">Home</a>
+    <a href="services.html" class="font-sans font-bold text-[14px] tracking-[0.05em] uppercase text-on-surface-variant hover:text-primary transition-colors">Services &amp; Pricing</a>
+    <a href="estimate.html" class="font-sans font-bold text-[14px] tracking-[0.05em] uppercase text-primary border-b-2 border-primary">Pricing Calculator</a>
+    <a href="about.html" class="font-sans font-bold text-[14px] tracking-[0.05em] uppercase text-on-surface-variant hover:text-primary transition-colors">About Us</a>
+    <a href="corporate.html" class="font-sans font-bold text-[14px] tracking-[0.05em] uppercase text-on-surface-variant hover:text-primary transition-colors">Corporate</a>
+    <a href="contact.html" class="font-sans font-bold text-[14px] tracking-[0.05em] uppercase text-on-surface-variant hover:text-primary transition-colors">Contact</a>
+  </nav>
+  <a href="estimate.html" class="hidden md:inline-flex bg-primary-container text-on-primary font-bold px-8 py-3 rounded-full shadow-lg hover:opacity-90 active:scale-95 transition-all duration-200 text-sm">Get Free Estimate</a>
+</header>
+
+<aside id="mobileDrawer" class="fixed inset-0 z-40 hidden">
+  <div id="drawerOverlay" class="absolute inset-0 bg-black/50"></div>
+  <div class="absolute top-0 left-0 h-full w-4/5 bg-surface shadow-2xl flex flex-col py-6">
+    <div class="px-6 pb-6 border-b border-primary/5"><h2 class="font-serif text-[28px] font-bold text-primary">Royal Menu</h2></div>
+    <nav class="flex flex-col gap-2 px-4 mt-4">
+      <a href="index.html" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-full font-sans text-[18px]"><span class="material-symbols-outlined">home</span> Home</a>
+      <a href="services.html" class="text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-full font-sans text-[18px]"><span class="material-symbols-outlined">payments</span> Services &amp; Pricing</a>
+      <a href="estimate.html" class="flex items-center gap-4 bg-primary-container text-on-primary rounded-full px-4 py-3 font-sans text-[18px]"><span class="material-symbols-outlined icon-fill">calculator</span> Pricing Calculator</a>
+      <a href="about.html" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-full font-sans text-[18px]"><span class="material-symbols-outlined">group</span> About Us</a>
+      <a href="corporate.html" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-full font-sans text-[18px]"><span class="material-symbols-outlined">business</span> Corporate Quotes</a>
+      <a href="contact.html" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-full font-sans text-[18px]"><span class="material-symbols-outlined">call</span> Contact Us</a>
+      <a href="careers.html" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-full font-sans text-[18px]"><span class="material-symbols-outlined">work</span> Careers</a>
+      <a href="privacy.html" class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-surface-container-high rounded-full font-sans text-[18px]"><span class="material-symbols-outlined">shield</span> Privacy Policy</a>
+    </nav>
+  </div>
+</aside>
+
+<!-- Page Header -->
+<div class="w-full h-48 md:h-64 bg-surface-container-highest relative overflow-hidden flex items-end pb-12 px-5 md:px-20">
+  <div class="absolute inset-0 opacity-40 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuA45Qn3mz_8UO5JRlyU7n9BXtXds2-EzWsdkCS6Exk5uf8SMpex_tjzqytFE4Gyl3YnBl5wcOw8t3HNstorsw7I1AdktzIQyX56e45ccRtz5yq6ZsFcHj7Mabpg5lDg9F7gXvQCKYpABaIkzZBa1JXzGovqD9IgtDMoxuVdTQx-SMinmtbe6tX3q9AMVKfopqY8rlxfs_f7i-Z9jHth0Rdgo35DnVwTq9jWccdphUHlARMxTJpz9sWhAlyp5RzlqRLIaTWPTFpq6L9V')"></div>
+  <div class="relative z-10 max-w-7xl mx-auto w-full">
+    <h1 class="font-serif font-bold text-[28px] md:text-[48px] text-primary drop-shadow-md">Yard Pricing Calculator</h1>
+    <p class="font-sans text-[18px] text-on-surface-variant mt-2 max-w-2xl">Instantly estimate your lawn care investment. Our transparent pricing ensures royal treatment without the surprises.</p>
+  </div>
+</div>
+
+<!-- Calculator -->
+<main class="max-w-7xl mx-auto px-5 md:px-20 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+  <!-- Left: Form -->
+  <section class="lg:col-span-7 flex flex-col gap-12">
+    <!-- Step 1 -->
+    <div>
+      <div class="flex items-center gap-4 mb-6"><div class="w-8 h-8 rounded-full bg-primary-container text-white flex items-center justify-center font-bold text-sm">1</div><h2 class="font-serif text-[24px] font-bold text-primary">Measure Your Estate</h2></div>
+      <div class="bg-surface-container-lowest p-8 rounded-xl border border-primary/10 shadow-lg flex flex-col gap-6">
+        <label class="font-bold text-sm text-on-surface">Total Yard Size</label>
+        <div class="flex flex-col sm:flex-row gap-4 items-end">
+          <div class="relative w-full sm:w-2/3">
+            <input id="yardSize" type="number" value="0.25" step="0.01" min="0.01" class="w-full bg-transparent border-0 border-b-2 border-secondary/20 py-3 text-[18px] font-sans text-on-surface focus:ring-0 focus:border-primary transition-colors" />
+          </div>
+          <div class="w-full sm:w-1/3 flex border border-outline-variant rounded-lg overflow-hidden h-12">
+            <button id="unitAcres" class="flex-1 bg-primary/5 text-primary font-bold text-sm flex items-center justify-center border-r border-outline-variant">Acres</button>
+            <button id="unitSqft" class="flex-1 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high transition-colors font-bold text-sm flex items-center justify-center">Sq Ft</button>
+          </div>
+        </div>
+        <p class="text-xs text-outline font-sans">Don't know your size? A standard lot is about 0.25 acres.</p>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div>
+      <div class="flex items-center gap-4 mb-6"><div class="w-8 h-8 rounded-full bg-primary-container text-white flex items-center justify-center font-bold text-sm">2</div><h2 class="font-serif text-[24px] font-bold text-primary">Select Service Tier</h2></div>
+      <div class="space-y-4">
+        <label class="block bg-surface-container-lowest border-2 border-primary/10 p-6 rounded-xl cursor-pointer hover:border-primary/30 transition-all flex items-start gap-4" onclick="selectTier('standard')">
+          <input type="radio" name="tier" value="standard" class="mt-1 accent-primary" />
+          <div class="flex-1"><h3 class="font-bold text-[18px] text-primary">Standard Care</h3><p class="text-[16px] text-on-surface-variant mb-4">Essential mowing, edging, and debris clearing for a neat appearance.</p><span class="inline-block px-3 py-1 bg-surface-container-high text-xs rounded-full font-bold">Base Rate</span></div>
+        </label>
+        <label class="block bg-surface-container-lowest border-2 border-primary p-6 rounded-xl cursor-pointer flex items-start gap-4 overflow-hidden" onclick="selectTier('premium')">
+          <input type="radio" name="tier" value="premium" checked class="mt-1 accent-primary" />
+          <div class="flex-1"><h3 class="font-bold text-[18px] text-primary">Premium Stewardship</h3><p class="text-[16px] text-on-surface-variant mb-4">Standard Care plus fertilization, weed control, and seasonal aeration.</p><div class="flex gap-2"><span class="inline-flex items-center gap-1 px-3 py-1 bg-tertiary-container/10 text-tertiary-container text-xs rounded-full"><span class="material-symbols-outlined text-[14px]">star</span> Most Popular</span><span class="inline-block px-3 py-1 bg-surface-container-high text-xs rounded-full font-bold">+ 40%</span></div></div>
+        </label>
+        <label class="block bg-surface-container-lowest border-2 border-primary/10 p-6 rounded-xl cursor-pointer hover:border-primary/30 transition-all flex items-start gap-4" onclick="selectTier('royal')">
+          <input type="radio" name="tier" value="royal" class="mt-1 accent-primary" />
+          <div class="flex-1"><h3 class="font-bold text-[18px] text-primary">The Royal Treatment</h3><p class="text-[16px] text-on-surface-variant mb-4">Comprehensive estate management. Includes soil testing, overseeding, and priority scheduling.</p><span class="inline-block px-3 py-1 bg-surface-container-high text-xs rounded-full font-bold">+ 85%</span></div>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Right: Quote -->
+  <section class="lg:col-span-5">
+    <div class="sticky top-24 bg-surface-container-lowest rounded-2xl shadow-[0_10px_40px_rgba(0,35,102,0.12)] border border-primary/5 overflow-hidden">
+      <div class="bg-primary-container p-8 text-white relative overflow-hidden">
+        <div class="absolute right-[-20px] top-[-20px] opacity-10"><span class="material-symbols-outlined text-[120px]">receipt_long</span></div>
+        <span class="text-xs uppercase tracking-widest font-bold opacity-80">Estimated Quote</span>
+        <div class="flex items-baseline gap-2 mt-2"><span id="estimateAmount" class="font-serif text-[48px] font-bold text-white">$63</span><span class="text-sm opacity-80">/ visit</span></div>
+      </div>
+      <div class="p-8 flex flex-col gap-6">
+        <div class="flex flex-col gap-3">
+          <div class="flex justify-between items-center border-b border-surface-variant pb-3"><span class="text-[16px] text-on-surface-variant">Base Rate</span><span id="baseRateDisplay" class="font-bold text-primary">$45.00</span></div>
+          <div class="flex justify-between items-center border-b border-surface-variant pb-3"><span id="tierLabel" class="text-[16px] text-on-surface-variant">Premium Tier Adj. (+40%)</span><span id="tierAdjustDisplay" class="font-bold text-tertiary-container">+$18.00</span></div>
+          <div class="flex justify-between items-center pt-2"><span class="font-bold text-[18px] text-primary">Total Estimate</span><span id="totalDisplay" class="font-bold text-[22px] text-primary">$63.00</span></div>
+        </div>
+        <div class="bg-surface p-4 rounded-lg flex items-start gap-3 border border-primary/5"><span class="material-symbols-outlined text-primary mt-0.5 text-sm">info</span><p class="text-xs text-on-surface-variant">This is an estimate based on provided details. Final pricing is confirmed after a brief on-site evaluation by our stewardship team.</p></div>
+        <button onclick="alert('Thanks for your interest! We\'ll be in touch soon.')" class="w-full bg-primary-container hover:bg-on-primary-fixed-variant transition-colors text-white py-4 rounded-lg font-bold text-sm shadow-lg flex items-center justify-center gap-2">Book This Estimate <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></button>
+        <button onclick="alert('Quote saved!')" class="w-full bg-transparent text-primary py-2 font-bold text-sm hover:underline">Save Quote for Later</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Trust Indicators -->
+<section class="max-w-5xl mx-auto px-5 md:px-20 py-12 border-t border-primary/10 flex flex-col sm:flex-row justify-center gap-8 sm:gap-16 text-center">
+  <div><div class="w-12 h-12 rounded-full bg-tertiary-container/10 flex items-center justify-center text-tertiary-container mx-auto mb-2"><span class="material-symbols-outlined icon-fill">verified</span></div><h4 class="font-bold text-sm">Satisfaction Guaranteed</h4><p class="text-xs text-on-surface-variant max-w-[160px] mx-auto">If you aren't thrilled, we'll re-service your lawn for free.</p></div>
+  <div><div class="w-12 h-12 rounded-full bg-tertiary-container/10 flex items-center justify-center text-tertiary-container mx-auto mb-2"><span class="material-symbols-outlined icon-fill">family_history</span></div><h4 class="font-bold text-sm">Family Operated</h4><p class="text-xs text-on-surface-variant max-w-[160px] mx-auto">Local stewardship with a commitment to our community.</p></div>
+  <div><div class="w-12 h-12 rounded-full bg-tertiary-container/10 flex items-center justify-center text-tertiary-container mx-auto mb-2"><span class="material-symbols-outlined icon-fill">payments</span></div><h4 class="font-bold text-sm">Transparent Pricing</h4><p class="text-xs text-on-surface-variant max-w-[160px] mx-auto">No hidden fees or surprise upcharges on your invoice.</p></div>
+</section>
+
+<footer class="bg-surface-container-highest border-t border-primary/10 py-12 px-5 md:px-20 text-center">
+  <div class="max-w-7xl mx-auto flex flex-col items-center gap-6">
+    <a href="index.html" class="font-serif font-bold text-[28px] text-primary">Royal LawnCare</a>
+    <nav class="flex flex-wrap justify-center gap-6">
+      <a href="index.html" class="font-sans text-[16px] text-on-surface-variant hover:text-primary transition-colors">Home</a>
+      <a href="services.html" class="font-sans text-[16px] text-on-surface-variant hover:text-primary transition-colors">Services</a>
+      <a href="estimate.html" class="font-sans text-[16px] text-on-surface-variant hover:text-primary transition-colors">Pricing</a>
+      <a href="about.html" class="font-sans text-[16px] text-on-surface-variant hover:text-primary transition-colors">About</a>
+      <a href="corporate.html" class="font-sans text-[16px] text-on-surface-variant hover:text-primary transition-colors">Corporate</a>
+      <a href="contact.html" class="font-sans text-[16px] text-on-surface-variant hover:text-primary transition-colors">Contact</a>
+      <a href="careers.html" class="font-sans text-[16px] text-on-surface-variant hover:text-primary transition-colors">Careers</a>
+      <a href="privacy.html" class="font-sans text-[16px] text-on-surface-variant hover:text-primary transition-colors">Privacy</a>
+    </nav>
+    <p class="font-sans text-[16px] text-on-surface-variant opacity-70">&copy; 2024 Royal LawnCare. Family Owned &amp; Operated.</p>
+  </div>
+</footer>
+
+<script>
+const TIERS = { standard: { label: "Standard Care", multiplier: 1.0, adjText: "Standard (Base Rate)" }, premium: { label: "Premium Stewardship", multiplier: 1.4, adjText: "Premium Tier Adj. (+40%)" }, royal: { label: "The Royal Treatment", multiplier: 1.85, adjText: "Royal Tier Adj. (+85%)" } };
+let currentUnit = "acres", currentTier = "premium";
+function getTypicalRate(sqft) { if (sqft <= 5000) return 45; if (sqft <= 10000) return 60; if (sqft <= 20000) return 80; return 150; }
+function updateEstimate() {
+  const size = parseFloat(document.getElementById("yardSize").value) || 0.25;
+  const sqft = currentUnit === "acres" ? size * 43560 : size;
+  const typical = getTypicalRate(sqft);
+  const tier = TIERS[currentTier];
+  const total = Math.round(typical * tier.multiplier);
+  const adj = total - typical;
+  document.getElementById("estimateAmount").textContent = "$" + total;
+  document.getElementById("baseRateDisplay").textContent = "$" + typical.toFixed(2);
+  document.getElementById("tierLabel").textContent = tier.adjText;
+  document.getElementById("tierAdjustDisplay").textContent = (adj >= 0 ? "+" : "") + "$" + adj.toFixed(2);
+  document.getElementById("totalDisplay").textContent = "$" + total.toFixed(2);
+}
+function selectTier(tier) {
+  currentTier = tier;
+  document.querySelectorAll('input[name="tier"]').forEach(r => { r.checked = r.value === tier; r.closest('label').style.borderColor = r.value === tier ? '#4b0082' : 'rgba(46,0,82,0.1)'; });
+  updateEstimate();
+}
+document.getElementById("unitAcres").addEventListener("click", function() { currentUnit = "acres"; document.getElementById("yardSize").value = 0.25; this.className = "flex-1 bg-primary/5 text-primary font-bold text-sm flex items-center justify-center border-r border-outline-variant"; document.getElementById("unitSqft").className = "flex-1 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high transition-colors font-bold text-sm flex items-center justify-center"; updateEstimate(); });
+document.getElementById("unitSqft").addEventListener("click", function() { currentUnit = "sqft"; document.getElementById("yardSize").value = 10890; this.className = "flex-1 bg-primary/5 text-primary font-bold text-sm flex items-center justify-center border-r border-outline-variant"; document.getElementById("unitAcres").className = "flex-1 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high transition-colors font-bold text-sm flex items-center justify-center"; updateEstimate(); });
+document.getElementById("yardSize").addEventListener("input", updateEstimate);
+updateEstimate();
+
+const menuBtn = document.getElementById("menuBtn");
+const drawer = document.getElementById("mobileDrawer");
+const overlay = document.getElementById("drawerOverlay");
+function openDrawer() { drawer.classList.remove("hidden"); document.body.style.overflow = "hidden"; }
+function closeDrawer() { drawer.classList.add("hidden"); document.body.style.overflow = ""; }
+menuBtn?.addEventListener("click", openDrawer);
+overlay?.addEventListener("click", closeDrawer);
+drawer?.querySelectorAll("a").forEach(a => a.addEventListener("click", closeDrawer));
+</script>
+</body>
+</html>
